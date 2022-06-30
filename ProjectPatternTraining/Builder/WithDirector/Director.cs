@@ -12,7 +12,7 @@ namespace ProjectPatternTraining.Builder.WithDirector
 
         public Director(IBuilder builder)
         {
-
+            Builder = builder;
         }
 
         public Product BuildMinimalViableProduct(int id)

@@ -1,5 +1,6 @@
 ﻿using ProjectPatternTraining.Builder;
 using ProjectPatternTraining.Builder.WithDirector;
+using ProjectPatternTraining.Prototyp;
 using System;
 
 namespace ProjectPatternTraining
@@ -15,7 +16,9 @@ namespace ProjectPatternTraining
 
         private static void StartPrototype()
         {
-
+            ModelToCopy modelToCopy1 = new ModelToCopy(1,"dwa", new DateTime());
+            var deppcopiedmodel = modelToCopy1.DeepCopy();
+            var shallowcopiedmodel = modelToCopy1.ShallowCopy();
         }
 
         private static void StartBuilder()
