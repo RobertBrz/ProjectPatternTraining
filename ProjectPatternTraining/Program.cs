@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectPatternTraining.Builder;
+using ProjectPatternTraining.Builder.WithDirector;
+using System;
 
 namespace ProjectPatternTraining
 {
@@ -6,7 +8,17 @@ namespace ProjectPatternTraining
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //builder 
+            ObjectBuilder objectBuilder = new ObjectBuilder();
+            objectBuilder.AddID(1);
+            objectBuilder.AddName("testname");
+            var model = objectBuilder.GetProduct();
+
+            //builder with director
+            ObjectBuilder objectBuilder2 = new ObjectBuilder();
+            Director director = new Director(objectBuilder2);
+            var model2 = director.BuildFullFeaturedProdut(1, "testname");
+
         }
     }
 }
