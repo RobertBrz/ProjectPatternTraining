@@ -8,6 +8,18 @@ namespace ProjectPatternTraining
     {
         static void Main(string[] args)
         {
+            StartBuilder();
+            StartPrototype();
+
+        }
+
+        private static void StartPrototype()
+        {
+
+        }
+
+        private static void StartBuilder()
+        {
             //builder 
             ObjectBuilder objectBuilder = new ObjectBuilder();
             objectBuilder.AddID(1);
@@ -18,7 +30,6 @@ namespace ProjectPatternTraining
             ObjectBuilder objectBuilder2 = new ObjectBuilder();
             Director director = new Director(objectBuilder2);
             var model2 = director.BuildFullFeaturedProdut(1, "testname");
-
         }
     }
 }
