@@ -1,6 +1,7 @@
 ﻿using ProjectPatternTraining.Builder;
 using ProjectPatternTraining.Builder.WithDirector;
 using ProjectPatternTraining.Factory;
+using ProjectPatternTraining.ProductionMethod;
 using ProjectPatternTraining.Prototyp;
 using System;
 
@@ -13,6 +14,12 @@ namespace ProjectPatternTraining
             StartBuilder();
             StartPrototype();
             StartFactory();
+            StartProductionMethod();
+        }
+
+        private static void StartProductionMethod()
+        {
+            new CreatorClass().Operation();
         }
 
         private static void StartFactory()
